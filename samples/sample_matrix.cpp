@@ -28,13 +28,9 @@ void main()
   cout << "Matrix b = " << endl << b << endl;
   cout << "Matrix c = a + b" << endl << c << endl;*/
 
-    TVector<int> v(3);
-    TVector<int> s(3);
-    for (int i = 0; i < 3; i++)
-    {
-        v[i] = i * i;
-        s[i] = i + 1;
-    }
-    cout << v*s;
+
+    //TVector<int> a(5);
+    //a[4] = 0;
+    //cout << a[4];
 }
 //---------------------------------------------------------------------------

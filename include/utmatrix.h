@@ -91,7 +91,7 @@ ValType& TVector<ValType>::operator[](int pos)
     pos -= StartIndex;
     if (pos >= Size || pos < 0)
         throw pos;
-    else return pVector[pos];
+    return pVector[pos];
 } /*-------------------------------------------------------------------------*/
 
 template <class ValType> // сравнение
@@ -195,6 +195,8 @@ TVector<ValType> TVector<ValType>::operator-(const TVector<ValType> &v)
 template <class ValType> // скалярное произведение
 ValType TVector<ValType>::operator*(const TVector<ValType> &v)
 {
+    if (Size != v.Size)
+        throw Size;
     ValType res = 0;
     for (int i = 0; i < Size; i++)
         res += pVector[i] * v.pVector[i];
